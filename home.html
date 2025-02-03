@@ -266,17 +266,18 @@
         <h3>Educational Domains to Explore</h3>
         <div class="domains">
             <div>
-                <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg" alt="AI Learning">
-                <h4>Artificial Intelligence</h4>
-                <p>Learn how AI can transform learning experiences.</p>
+                <button onclick="window.location.href='AI.html'" style="background-color: white; border: none;"><img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg" alt="AI Learning">
+                    <h4>Artificial Intelligence</h4>
+                    <p>Learn how AI can transform learning experiences.</p></button>
+                
             </div>
             <div>
-                <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/https://builtin.com/sites/www.builtin.com/files/2024-10/data-science.jpg" alt="Data Science">
+                <img onclick="window.location.href='DataScience.html'" style="background-color: white; border: none;"src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/https://builtin.com/sites/www.builtin.com/files/2024-10/data-science.jpg" alt="Data Science">
                 <h4>Data Science</h4>
                 <p>Master the art of data analysis and predictive models.</p>
             </div>
             <div>
-                <img src="https://designindc.com/wp-content/uploads/2022/12/Machine-Learning.jpg" alt="Machine Learning">
+                <img onclick="window.location.href='AI.html'" style="background-color: white; border: none;"src="https://designindc.com/wp-content/uploads/2022/12/Machine-Learning.jpg" alt="Machine Learning">
                 <h4>Machine Learning</h4>
                 <p>Understand machine learning algorithms and their applications.</p>
             </div>
@@ -285,17 +286,17 @@
         <h3>How AI Improves Education</h3>
         <div class="features">
             <div>
-                <img src="https://cdn.elearningindustry.com/wp-content/uploads/2023/06/Shutterstock_2287315871.jpg" alt="Personalized Learning">
+                <img onclick="window.location.href='AI.html'" style="background-color: white; border: none;"src="https://cdn.elearningindustry.com/wp-content/uploads/2023/06/Shutterstock_2287315871.jpg" alt="Personalized Learning">
                 <h4>Personalized Learning</h4>
                 <p>AI customizes your learning experience based on your needs.</p>
             </div>
             <div>
-                <img src="https://projectpals.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/07/AIHelper1LowRes.jpg.webp" alt="Instant Feedback">
+                <img onclick="window.location.href='AI.html'" style="background-color: white; border: none;"src="https://projectpals.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/07/AIHelper1LowRes.jpg.webp" alt="Instant Feedback">
                 <h4>Instant Feedback</h4>
                 <p>Receive immediate feedback to accelerate your learning.</p>
             </div>
             <div>
-                <img src="https://www.ixrlabs.com/blog/assets/admin/uploads/ai-and-data-analytics-in-higher-education.jpg" alt="Data Insights">
+                <img onclick="window.location.href='AI.html'" style="background-color: white; border: none;"src="https://www.ixrlabs.com/blog/assets/admin/uploads/ai-and-data-analytics-in-higher-education.jpg" alt="Data Insights">
                 <h4>Data-Driven Insights</h4>
                 <p>AI analyzes your performance and offers actionable insights.</p>
             </div>
@@ -380,6 +381,22 @@ document.addEventListener("click", function(event) {
         document.getElementById("searchResults").style.display = "none";
     }
 });
+
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // You can add validation and then submit data
+        alert("Sign Up successful! Redirecting to login...");
+        window.location.href = "login.html"; // Redirect to login page
+    });
+
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // You can add login logic here
+        alert("Login successful! Redirecting to dashboard...");
+        window.location.href = "dashboard.html"; // Redirect to dashboard page
+    });
+
+
 
 
 
