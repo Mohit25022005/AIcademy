@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Education</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, button {
+            padding: 15px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        input {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #chatbot-response {
+            font-style: italic;
+            color: #007bff;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            header {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            input, button {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Mobile View */
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.2rem;
+                padding: 15px 0;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            input, button {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>Enhancing Education with AI</header>
+
+    <div class="container">
+
+        <!-- Introduction Section -->
+        <div class="card">
+            <h2>How AI Improves Education</h2>
+            <p>AI enables personalized learning, real-time feedback, and automated assessments to make education more engaging and effective. Discover how AI can be your learning companion!</p>
+        </div>
+
+        <!-- Topic Recommendation Form -->
+        <div class="card">
+            <h2>Get AI-Powered Learning Recommendations</h2>
+            <div class="form-group">
+                <label for="mathScore">Math Score:</label>
+                <input type="number" id="mathScore" placeholder="Enter Math Score">
+            </div>
+            <div class="form-group">
+                <label for="scienceScore">Science Score:</label>
+                <input type="number" id="scienceScore" placeholder="Enter Science Score">
+            </div>
+            <button onclick="recommendTopic()">Get Recommended Topic</button>
+            <p id="recommendation"></p>
+        </div>
+
+        <!-- Chatbot Section -->
+        <div class="card">
+            <h2>Ask AI a Question</h2>
+            <input type="text" id="chatInput" placeholder="Ask about AI in education...">
+            <button onclick="askChatbot()">Ask AI</button>
+            <p id="chatbot-response"></p>
+        </div>
+
+    </div>
+
+    <script>
+        function recommendTopic() {
+            let mathScore = document.getElementById("mathScore").value;
+            let scienceScore = document.getElementById("scienceScore").value;
+            
+            // Simple logic for demonstration
+            let recommendedTopic = "General AI Concepts";
+            if (mathScore >= 80 && scienceScore >= 80) {
+                recommendedTopic = "Advanced Machine Learning";
+            } else if (mathScore >= 60) {
+                recommendedTopic = "AI in Mathematics";
+            } else if (scienceScore >= 60) {
+                recommendedTopic = "AI in Science";
+            }
+
+            document.getElementById("recommendation").innerText = "Recommended Topic: " + recommendedTopic;
+        }
+
+        function askChatbot() {
+            let question = document.getElementById("chatInput").value;
+            
+            // Simple mock response
+            let response = "AI helps personalize education based on student performance.";
+            if (question.toLowerCase().includes("benefits")) {
+                response = "AI provides personalized learning, automated grading, and instant feedback!";
+            } else if (question.toLowerCase().includes("future")) {
+                response = "The future of AI in education includes VR learning, AI tutors, and real-time progress tracking.";
+            }
+
+            document.getElementById("chatbot-response").innerText = response;
+        }
+    </script>
+
+</body>
+</html>
