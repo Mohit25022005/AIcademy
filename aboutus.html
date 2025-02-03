@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AIcademy</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* About Us Container */
+        .about-container {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Heading and Subheading */
+        h1 {
+            color: #007BFF;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        h2 {
+            color: #007BFF;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Benefit List */
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .benefit-list li {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .benefit-list li::before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            color: #007BFF;
+        }
+
+        /* Footer Styles */
+        .footer {
+            margin-top: 30px;
+            font-size: 1em;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .about-container {
+                padding: 20px 15px;
+            }
+
+            p,
+            .benefit-list li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- About Us Container -->
+    <div class="about-container">
+        <h1>About AIcademy</h1>
+        <h2>How AI is Enhancing Education</h2>
+
+        <p>AI is revolutionizing the education sector by providing personalized, efficient, and effective learning experiences. AI technologies are enabling both students and educators to interact with learning material in a dynamic way, ultimately enhancing the overall educational experience. Here's how AI can help:</p>
+
+        <!-- Benefits List -->
+        <ul class="benefit-list">
+            <li><strong>Personalized Learning:</strong> AI adapts to individual learning styles, ensuring that students get the most tailored learning experience.</li>
+            <li><strong>Efficient Grading and Assessment:</strong> AI can grade assignments, providing quick feedback, allowing teachers to focus more on interactive learning.</li>
+            <li><strong>24/7 Learning Support:</strong> AI-powered tutoring systems provide on-demand assistance to students, helping them learn at their own pace.</li>
+            <li><strong>Smart Content Creation:</strong> AI can create interactive learning materials, such as quizzes and personalized study plans, improving engagement and knowledge retention.</li>
+            <li><strong>Data-Driven Insights:</strong> AI collects data on student progress and performance, helping educators identify trends and tailor their teaching strategies.</li>
+            <li><strong>Enhanced Collaboration:</strong> AI can facilitate collaboration through virtual classrooms and discussion boards, connecting students globally.</li>
+        </ul>
+
+        <!-- Footer Links -->
+        <div class="footer">
+            <p>Want to start your learning journey with us? <a href="signup.html">Sign Up</a> or <a href="login.html">Log In</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

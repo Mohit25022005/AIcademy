@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans & Pricing - AIcademy</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Plans Section */
+        .plans-section {
+            margin-top: 80px;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .plans-section h2 {
+            font-size: 2.5em;
+            color: #0056b3;
+            margin-bottom: 40px;
+        }
+
+        .plan-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .plan-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            width: 280px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan-card h3 {
+            color: #007BFF;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .plan-card .price {
+            font-size: 1.5em;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .plan-card ul {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .plan-card ul li {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .plan-card ul li::before {
+            content: '✔️';
+            color: green;
+            margin-right: 10px;
+        }
+
+        .plan-card button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .plan-card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .plan-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .plan-card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            AIcademy
+        </div>
+        <nav>
+            <a href="#plans">Plans & Pricing</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="#learnmore">Learn More</a>
+        </nav>
+    </header>
+
+    <!-- Plans and Pricing Section -->
+    <section class="plans-section" id="plans">
+        <h2>Choose a Plan for Success</h2>
+        <p>Don't want to buy courses one by one? Pick a plan to help you, your team, or your organization achieve outcomes faster.</p>
+
+        <div class="plan-cards">
+            <!-- Personal Plan -->
+            <div class="plan-card">
+                <h3>Personal Plan</h3>
+                <p class="price">₹50/month</p>
+                <p>For you, Individual</p>
+                <ul>
+                    <li>Access to best AI powered courses</li>
+                    <li>Certification prep</li>
+                    <li>Goal-focused recommendations</li>
+                    <li>AI-powered coding exercises</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+
+            <!-- Team Plan -->
+            <div class="plan-card">
+                <h3>Team Plan</h3>
+                <p class="price">₹100/user/month</p>
+                <p>For 2 to 20 people</p>
+                <ul>
+                    <li>Access to best AI powered courses</li>
+                    <li>Certification prep</li>
+                    <li>Goal-focused recommendations</li>
+                    <li>AI-powered coding exercises</li>
+                    <li>Analytics and adoption reports</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="plan-card">
+                <h3>Enterprise Plan</h3>
+                <p class="price">Contact Sales</p>
+                <p>For your whole organization</p>
+                <ul>
+                    <li>Access to best AI powered courses</li>
+                    <li>Certification prep</li>
+                    <li>Goal-focused recommendations</li>
+                    <li>AI-powered coding exercises</li>
+                    <li>Advanced analytics and insights</li>
+                    <li>Dedicated customer success team</li>
+                    <li>International course collection featuring 15 languages</li>
+                    <li>Customizable content</li>
+                    <li>Hands-on tech training (add-on)</li>
+                    <li>Strategic implementation services (add-on)</li>
+                </ul>
+                <button>Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Optional JavaScript for button interactions
+    </script>
+</body>
+
+</html>

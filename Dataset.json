@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "title": "AI Fundamentals",
+        "category": "Artificial Intelligence",
+        "description": "An introduction to the basics of AI, including machine learning and deep learning.",
+        "level": "Beginner",
+        "instructor": "Dr. John Doe",
+        "duration": "6 weeks",
+        "link": "courses/ai-fundamentals.html"
+    },
+    {
+        "id": 2,
+        "title": "Machine Learning Basics",
+        "category": "Machine Learning",
+        "description": "Learn fundamental ML concepts, including supervised and unsupervised learning.",
+        "level": "Beginner",
+        "instructor": "Prof. Jane Smith",
+        "duration": "8 weeks",
+        "link": "courses/ml-basics.html"
+    },
+    {
+        "id": 3,
+        "title": "Deep Learning with Python",
+        "category": "Machine Learning",
+        "description": "A hands-on guide to deep learning using TensorFlow and PyTorch.",
+        "level": "Intermediate",
+        "instructor": "Dr. Alan Turing",
+        "duration": "10 weeks",
+        "link": "courses/deep-learning-python.html"
+    },
+    {
+        "id": 4,
+        "title": "Data Analysis with Pandas",
+        "category": "Data Science",
+        "description": "Master data manipulation and analysis using Python’s Pandas library.",
+        "level": "Beginner",
+        "instructor": "Dr. Grace Hopper",
+        "duration": "5 weeks",
+        "link": "courses/data-analysis-pandas.html"
+    },
+    {
+        "id": 5,
+        "title": "Neural Networks Explained",
+        "category": "Artificial Intelligence",
+        "description": "Understand the inner workings of neural networks and their applications.",
+        "level": "Advanced",
+        "instructor": "Dr. Geoffrey Hinton",
+        "duration": "12 weeks",
+        "link": "courses/neural-networks.html"
+    }
+]
