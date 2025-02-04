@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AIcademy</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .content {
+            padding: 100px 40px;
+            text-align: center;
+            background-color: #fff;
+            margin-top: 60px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons button {
+            padding: 12px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .features div {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .features div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .features img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffeb3b;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            AIcademy
+        </div>
+        <nav>
+            <a href="profile.html">Profile</a>
+            <a href="course-management.html">Manage Courses</a>
+            <a href="suggestions.html">Course Suggestions</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Dashboard Content Section -->
+    <div class="content">
+        <h2>Welcome to Your AIcademy Dashboard</h2>
+        <p>Your personalized learning journey starts here!</p>
+
+        <div class="cta-buttons">
+            <button onclick="window.location.href='manage-courses.html'">Manage My Courses</button>
+            <button onclick="window.location.href='course-suggestions.html'">Get AI Course Suggestions</button>
+        </div>
+
+        <h3>Your Learning Progress</h3>
+        <div id="userCourses" class="features">
+            <!-- Dynamic Course Progress Data -->
+        </div>
+
+        <h3>Suggested Courses</h3>
+        <div id="suggestedCourses" class="features">
+            <!-- Dynamic Course Suggestions -->
+        </div>
+
+        <h3>Your Learning Analytics</h3>
+        <p>View your progress, completion rates, and more in the Analytics section.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p><a href="#about">About us</a> | <a href="#contact">Contact Us</a> | <a href="#support">Support</a></p>
+        <p>&copy; 2025 AIcademy, All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Course Data (can be fetched from server)
+        const userCourses = [
+            { title: "AI Fundamentals", progress: 60, image: "https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg" },
+            { title: "Machine Learning Basics", progress: 40, image: "https://designindc.com/wp-content/uploads/2022/12/Machine-Learning.jpg" },
+            { title: "Data Analysis with Pandas", progress: 80, image: "https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/https://builtin.com/sites/www.builtin.com/files/2024-10/data-science.jpg" }
+        ];
+
+        const suggestedCourses = [
+            { title: "Deep Learning with Python", description: "Learn how to build deep learning models using Python.", image: "https://www.timetraining.ae/uploads/studyhub/7_Steps_Guide_to_Master_Machine_Learning_with_Python.jpg" },
+            { title: "Neural Networks Explained", description: "An in-depth look at neural networks and how they work.", image: "https://www.shutterstock.com/shutterstock/photos/1742110256/display_1500/stock-vector-neural-network-logo-human-brain-emblem-artificial-intelligence-icon-creative-thinking-vector-1742110256.jpg" },
+            { title: "Data Visualization with Python", description: "Create compelling visualizations with data in Python.", image: "https://www.knowledgenile.com/wp-content/uploads/2019/12/Python-Based-Data-Visualisation-Tools-1.jpg" }
+        ];
+
+        // Function to display user courses dynamically
+        function displayUserCourses() {
+            const userCoursesContainer = document.getElementById('userCourses');
+            userCoursesContainer.innerHTML = '';
+
+            userCourses.forEach(course => {
+                const courseDiv = document.createElement('div');
+                courseDiv.innerHTML = `
+                    <img src="${course.image}" alt="${course.title}">
+                    <h4>${course.title}</h4>
+                    <p>Progress: ${course.progress}%</p>
+                    <button onclick="alert('You selected: ${course.title}')">View Course</button>
+                `;
+                userCoursesContainer.appendChild(courseDiv);
+            });
+        }
+
+        // Function to display suggested courses dynamically
+        function displaySuggestedCourses() {
+            const suggestedCoursesContainer = document.getElementById('suggestedCourses');
+            suggestedCoursesContainer.innerHTML = '';
+
+            suggestedCourses.forEach(course => {
+                const courseDiv = document.createElement('div');
+                courseDiv.innerHTML = `
+                    <img src="${course.image}" alt="${course.title}">
+                    <h4>${course.title}</h4>
+                    <p>${course.description}</p>
+                    <button onclick="enrollInCourse('${course.title}')">Enroll Now</button>
+                `;
+                suggestedCoursesContainer.appendChild(courseDiv);
+            });
+        }
+
+        // Function to simulate enrolling in a course
+        function enrollInCourse(courseTitle) {
+            alert(`You have successfully enrolled in: ${courseTitle}`);
+        }
+
+        // Initialize page content
+        displayUserCourses();
+        displaySuggestedCourses();
+    </script>
+</body>
+
+</html>
